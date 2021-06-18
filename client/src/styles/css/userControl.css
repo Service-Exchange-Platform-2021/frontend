@@ -1,0 +1,61 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  font-size: 15px;
+   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.backRegister .div-center {
+  width: 60%;
+  height: 120%;
+  background-color: whitesmoke;
+  position: absolute;
+  left: 0;
+  top: 9%;  
+  margin: auto; 
+  overflow: auto;
+  border: 1px solid #8a6767;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.backLogin .div-center {
+  width: 45%;
+  height: 75%;
+  background-color: whitesmoke;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 9%;
+  margin: auto;
+  border: 1px solid #8a6767;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.backResetPW .div-center {
+  width: 40%;
+  height: 40%;
+  background-color: whitesmoke;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 9%;
+  margin: auto;
+  border: 1px solid #8a6767;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+/*# sourceMappingURL=userAccount.css.map */

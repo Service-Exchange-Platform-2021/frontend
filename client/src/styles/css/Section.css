@@ -1,0 +1,86 @@
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--clr-grey-light);
+  color: #404040;
+}
+
+h5 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  color: var(--clr-orange-dark);
+}
+
+.card-deck {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 3.5rem;
+  width: 100vw;
+}
+
+.card {
+  width: 35%;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  margin-left: 0.2rem;
+  border: 2px solid black;
+  z-index: -1;
+}
+
+.card:hover {
+  background: var(--clr-orange-light);
+  opacity: 0.7;
+  cursor: pointer;
+  color: var(--clr-white);
+}
+
+.card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem;
+}
+
+.card-title {
+  font-family: "Oswald", sans-serif;
+  margin-top: 0.8rem;
+}
+
+.card-title span {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-right: 0.5rem;
+}
+
+.card-text {
+  font-family: "Oswald", sans-serif;
+  font-size: 12px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.icons {
+  margin-top: auto;
+  font-size: 2rem;
+}
+/*# sourceMappingURL=Section.css.map */

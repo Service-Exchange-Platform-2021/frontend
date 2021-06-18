@@ -1,0 +1,23 @@
+@mixin flexCenter($direction, $background) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+  background: $background;
+}
+
+@mixin flexCenterOnly() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin redButtons() {
+  border-radius: 2px;
+  padding: 5px;
+  width: 42px;
+  font-size: 13px;
+  color: white;
+  background-color: $redButton;
+  border: none;
+}

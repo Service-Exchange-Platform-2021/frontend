@@ -1,0 +1,93 @@
+@charset "UTF-8";
+.lingua {
+  width: 30px;
+}
+
+.dropdown-item {
+  font-family: "Oswald", sans-serif;
+  padding: .25rem 0.5rem !important;
+  color: #404040 !important;
+}
+
+.dropdown-menu.show {
+  min-width: 107px !important;
+}
+
+.dropdown-toggle {
+  font-family: §fontFamily;
+  font-size: 13px;
+  color: #404040;
+}
+
+#btnGroupDrop {
+  font-family: "Oswald", sans-serif;
+  margin-top: 13px;
+  margin-left: 55px;
+}
+
+.dropdown-toggle:hover {
+  font-size: 13px;
+  color: #404040;
+}
+
+.dropdown-menu {
+  font: 13px;
+}
+
+/* .linguaMenu {
+    min-width: 30px !important;
+} */
+a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #111111;
+}
+
+a:hover {
+  color: #2c2c2c;
+}
+
+.dropdown-menu.show {
+  max-width: 50px;
+  min-width: 82px;
+  width: 50px !important;
+}
+
+.login {
+  margin-top: 8px;
+  height: 23px;
+  margin-left: 285px;
+}
+
+.log a {
+  font-family: "Oswald", sans-serif;
+  color: #404040;
+}
+
+.log a:hover {
+  color: #6e6e6e;
+  text-decoration: none;
+}
+
+.btn a {
+  font-size: 13px;
+}
+
+.btn-group {
+  margin-left: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+#btnGroupDrop {
+  margin-top: 13px;
+  margin-left: 55px;
+}
+/*# sourceMappingURL=Lingua.css.map */

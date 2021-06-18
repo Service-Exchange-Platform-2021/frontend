@@ -1,0 +1,39 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.footer {
+  width: 100%;
+  height: 46px;
+  background-color: $mainColor;
+  position: fixed;
+  bottom: 0px;
+  @include flexCenterOnly();
+  list-style: none;
+  z-index: 999999;
+}
+.footer ul {
+    margin-top: 0; 
+    margin-bottom: 0rem; 
+}
+
+.btnFooter {
+  border-style: none;
+  background-color: transparent;
+  color: rgb(231, 231, 231);
+  font-family: $fontFamily;
+  font-size: 11px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.btnFooter a {
+  font-style: normal;
+  font-size: 14px;
+  color: white;
+}
+
+.btnFooter a:hover {
+  font-size: 14px;
+  color: $lightWhiteOnHover;
+  text-decoration: none;
+}

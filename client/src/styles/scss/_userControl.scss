@@ -1,0 +1,104 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: $fontFamily;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.DDFindMenu {
+  position: relative;
+  left:5px;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.div-center {
+  position: absolute;
+  top: 73px;
+  z-index: 999;
+  font-family: $fontFamily;
+  font-size: 13px;
+  color: $mainColor;
+  z-index: 1000;
+  @media only screen and (max-width: 763px) {
+    top: 92px;
+}
+}
+
+.form-control {
+  font-family: $fontFamily;
+  font-size: 13px;
+  font-weight: 300;
+  color: $mainColor;
+}
+
+.backRegister>.div-center {
+  width: 60%;
+  height: auto;  
+  background-color: $bgColor;
+  overflow: scroll;  
+  left: 0;
+  right: 0;
+  margin: auto;  
+  @media only screen and (max-width: 537px){
+    width: 80%;
+  }
+  @media only screen and (max-width: 763px){
+    top: 92px;
+  }
+  
+}
+
+.backLogin>.div-center {   
+  width: 60%;
+  height: auto;
+  background-color: $bgColor;
+  right: 0;
+  left: 0;
+  margin: auto;
+  @media only screen and (max-width: 537px){
+    width: 80%;
+  }
+ 
+}
+
+.backForgetPW>.div-center{
+  width: 40%;
+  height: auto;
+  background-color: $bgColor;
+  left: 0;
+  right: 0; 
+  margin: auto;
+};
+
+.backResetPW>.div-center {
+  width: 30%;
+  height: auto;
+  background-color: $bgColor;
+  left: 0;
+  right: 0; 
+  margin: auto;
+};
+
+.MuiButton-label {
+    color: $mainColor;
+  }
+
+  .MuiButton-outlinedPrimary{
+    color: #5d5d5d !important;
+    border: 1px solid rgba(81, 81, 181, 0.5) !important;
+  }
+  .MuiButton-outlined{
+    color: #5d5d5d !important;
+    border: 1px solid rgba(81, 81, 181, 0.5) !important;
+  }
+  .MuiButton-root {
+    min-width: 39px !important;
+  }
+  .MuiButton-outlinedSizeSmall {
+    padding: 0px 10px;
+  }

@@ -1,0 +1,16 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.slightContainer {
+  height: 75vh;
+}
+
+.box-gallery {
+  top: 83px;
+  margin-bottom: 70px;
+  z-index: -1;
+}
+/*# sourceMappingURL=App.css.map */

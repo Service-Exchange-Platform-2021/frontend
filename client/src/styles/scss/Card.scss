@@ -1,0 +1,140 @@
+@import "variables.scss";
+
+.Card {
+    margin-top: 70px;
+    margin-left: 30px;
+    width: 95%;
+    min-height: 500px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 1px black;
+}
+
+.upper-container {
+    height: 110px;
+    background-image: url("https://www.synprodo.de/media/1001/light-grey-background-pattern-i1-1.jpg");
+
+}
+
+.upper-container .user-name {
+    z-index: 1;
+    left: 350px;
+    top: 140px;
+    position: absolute;
+}
+
+.upper-container h3 {
+    color: white;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+.image-container img {
+    background: white;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    padding: 6px;
+    transform: translate(130px, 20px);
+}
+
+img {
+    border: 2px solid black;
+}
+
+.lower-container {
+    margin-top: 5rem;
+    margin-bottom: 7rem;
+    min-height: 300px;
+    background: white;
+    text-align: center;
+    font-family: $fontFamily;
+
+
+}
+
+.flex-grid {
+    align-content: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.user-information {
+    margin-top: 3rem;
+    margin-left: 2rem;
+    width: 30%;
+    height: 200px;
+    background: $bgColor;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px 1px black;
+}
+
+.user-information:hover {
+    animation: ease-in-out;
+    transition-duration: 0.5s;
+    transform: scale(1.1);
+}
+
+.link-button {
+    width: 3rem;
+    height: 3rem;
+
+}
+
+.about-container {
+    margin: 0 2rem;
+    padding: 15px;
+    width: 60%;
+    height: 300px;
+    background: $bgColor;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px 1px black;
+
+}
+
+.about-container:hover {
+    animation: ease-in-out;
+    transition-duration: 0.5s;
+    transform: scale(1.1);
+}
+
+.lower-container h4 {
+    margin: 0.3rem;
+    color: $mainColor;
+    font-weight: 350;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.lower-container p {
+    margin: 0.5rem;
+    font-family: sans-serif;
+    color: gray;
+    font-weight: 350;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.div-center-details {
+
+    font-family: $fontFamily;
+    font-size: 13px;
+    color: $mainColor;
+    border: none;
+}
+
+.form-row-details {
+    display: flex;
+    flex-direction: row;
+    color: red;
+}
+
+.card-body-details {
+    flex-direction: row;
+}
+
+.description {
+    width: 50rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}

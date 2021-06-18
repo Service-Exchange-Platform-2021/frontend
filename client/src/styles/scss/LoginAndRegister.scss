@@ -1,0 +1,120 @@
+@import "./variables";
+
+.lingua {
+    width: 30px;
+}
+
+.dropdown-item {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 300;
+    padding: 0rem 0rem !important;
+    color: $mainColor !important;
+}
+
+.dropdown-menu.show {
+    min-width: 126px !important;
+}
+
+.dropdown-toggle {
+    font-size: 13px;
+    color: $mainColor;
+}
+
+#btnGroupDrop {
+    font-family: $fontFamily;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#btnGroupDrop:hover {
+    color: $lightGrayOnHover;
+    text-decoration: none;
+}
+
+.dropdown-toggle:hover {
+    font-size: 13px;
+    color: $mainColor;
+}
+
+.cc {
+    transform: translate(128.286px, 36.4286px) !important;
+}
+
+.dropdown-menu {
+    font: 13px;
+}
+
+a {
+    font-size: 13px;
+    color: rgb(17, 17, 17);
+}
+
+a:hover {
+    color: rgb(44, 44, 44);
+}
+
+.dropdown-menu.show {
+    max-width: 50px;
+    min-width: 82px;
+    width: 50px !important;
+}
+
+.login {
+    margin-top: 8px;
+    height: 23px;
+    margin-left: 285px
+}
+
+.log {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.log a {
+    font-family: $fontFamily;
+    color: $mainColor
+}
+
+.log a:hover {
+    color: $lightGrayOnHover;
+    text-decoration: none;
+}
+
+.btn-group {
+    margin-right: 31px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.LogRegLarge {
+    
+    display: flex;
+    flex-direction: row;
+
+    @media only screen and (max-width: 763px) {
+        display: none;
+    }
+}
+.log {
+    font-size: $fontSize;
+}
+
+.btn {
+    padding: 0px !important;
+}
+
+.lingua.show {
+    text-align: center;
+    min-width: 10px !important;
+    max-width: 25px !important;
+}
+
+.LogRegSmall button {
+    margin-left: 2px;
+    margin-bottom: 15px;
+    border: none;
+}

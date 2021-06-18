@@ -1,0 +1,67 @@
+.dropdown-menu {
+  max-width: 50px;
+  min-width: 100px;
+  width: 100px !important;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 35px;
+  margin-left: 96px;
+}
+
+.inp {
+  height: 23px;
+  font-size: 12px;
+  width: 90px;
+  font-style: italic;
+}
+
+.btnCat:hover {
+  color: #404040;
+}
+
+.btnCat {
+  font-family: "Oswald", sans-serif;
+  font-size: 13px;
+  border-width: 1px;
+  border-radius: 0px;
+  height: 23px;
+}
+
+.btnFind {
+  margin-top: 7px;
+  width: 42px;
+  height: 22px;
+  font-size: 9px;
+  color: white;
+  background-color: #b73c07;
+  border: none;
+}
+
+select {
+  font-family: "Oswald", sans-serif !important;
+  color: #404040 !important;
+}
+/*# sourceMappingURL=Find.css.map */
