@@ -1,315 +1,311 @@
 @import "mixins.scss";
-
 .dropdown-menu {
-  position: relative !important;
-  top: 0 !important;
-  left: -4px;
-  max-width: 50px;
-  min-width: 100px;
-  width: 100px !important;
+    position: relative !important;
+    top: 0 !important;
+    left: -4px;
+    max-width: 50px;
+    min-width: 100px;
+    width: 100px !important;
 }
 
 .menu {
-  display: flex;
-  flex-direction: row;
-  margin-left: 10px;
-  margin-right: 10px;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
 }
 
 .form {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .skillsMenus {
-  margin-left: 9px;
-  display: flex;
-  flex-direction: row;
-
-  @media only screen and (max-width: 762px) {
+    margin-left: 9px;
     display: flex;
-    flex-direction: column;
-    flex-basis: 25%;
-  }
+    flex-direction: row;
+    @media only screen and (max-width: 762px) {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 25%;
+    }
 }
 
 .inp {
-  height: 23px;
-  font-size: 12px;
-  width: 90px;
-  font-style: italic;
+    height: 23px;
+    font-size: 12px;
+    width: 90px;
+    font-style: italic;
 }
 
 .btn-check:focus+.btn,
 .btn:focus {
-  box-shadow: none;
+    box-shadow: none;
 }
 
 dropdown-item a:focus {
-  color: black;
-  text-decoration: none;
-  background-color: transparent;
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
 }
 
 .btnCat:hover {
-  color: $lightGrayOnHover !important;
+    color: $lightGrayOnHover !important;
 }
 
 .btnFind {
-  @include redButtons()
+    @include redButtons()
 }
 
 .btnFind:hover {
-  color: $lightWhiteOnHover;
+    color: $lightWhiteOnHover;
 }
 
 option {
-  width: 170px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-family: $fontFamily !important;
-  font-size: 13px !important;
-  font-weight: 300 !important;
+    width: 170px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: $fontFamily !important;
+    font-size: 13px !important;
+    font-weight: 300 !important;
 }
 
 select {
-  width: 110px;
-  font-size: 13px !important;
-  font-family: $fontFamily !important;
-  color: $mainColor !important;
-  background: none;
-  border: none;
-  outline: none;
+    width: 110px;
+    font-size: 13px !important;
+    font-family: $fontFamily !important;
+    color: $mainColor !important;
+    background: none;
+    border: none;
+    outline: none;
 }
 
 option:checked {
-  background-color: -moz-html-cellhighlight !important;
-  color: -moz-html-cellhighlighttext !important;
+    background-color: -moz-html-cellhighlight !important;
+    color: -moz-html-cellhighlighttext !important;
 }
 
 .dd-wrapper {
-  margin-left: 5px;
-  height: 25px;
-  position: relative;
+    margin-left: 5px;
+    height: 25px;
+    position: relative;
 }
 
 .dd-header:focus {
-  outline: none;
+    outline: none;
 }
 
 .dd-header_title {
-  width: 134px;
-  font-size: 13px !important;
+    width: 134px;
+    font-size: 13px !important;
 }
 
 .smallMenu {
-  width: 40px;
-  margin-left: 124px;
-  margin-top: -27px;
+    width: 40px;
+    margin-left: 124px;
+    margin-top: -27px;
 }
 
 .dd-list {
-  list-style-type: none;
-  background: #fff;
-  max-width: 50px;
-  height: 401px !important;
-  overflow-y: scroll;
-  min-width: 107px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
-  z-index: 1000;
-  text-align: left;
-  padding-top: 0rem;
+    list-style-type: none;
+    background: #fff;
+    max-width: 50px;
+    height: 401px !important;
+    overflow-y: scroll;
+    min-width: 107px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    z-index: 1000;
+    text-align: left;
+    padding-top: 0rem;
 }
 
 .dd-list button {
-  width: 117px;
-  font-family: $fontFamily;
-  font-style: normal;
-  font-weight: 300;
-  color: $mainColor;
-  background-color: transparent;
-  border: none;
-  display: flex;
-  flex-direction: row;
+    width: 117px;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 300;
+    color: $mainColor;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: row;
 }
 
 .dd-list button span {
-  font-size: 13px;
-  margin-right: 5px;
+    font-size: 13px;
+    margin-right: 5px;
 }
 
 .dd-header_title {
-  display: flex;
-  flex-direction: row;
-  position: left;
+    display: flex;
+    flex-direction: row;
+    position: left;
 }
 
 .dropdown-toggle {
-  weight: 122, 58px;
+    weight: 122, 58px;
 }
 
 .dropdown-toggle::after {
-  display: inline-block;
-  width: 0.5em;
-  height: 0.5em;
-  margin: -0.3em 0 0 0.4em;
-  margin-top: -0.3em;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 2.5em;
-  vertical-align: middle;
-  content: "";
-  border: 0.3em solid;
-  border-width: 0 0.15em 0.15em 0;
-  border-top-width: 0px;
-  border-right-width: 2px;
-  border-bottom-width: 2px;
-  border-left-width: 0px;
-  transform: rotateZ(45deg);
-
-  @media only screen and (max-width: 762px) {
-    margin-left: 1.7em;
-  }
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    margin: -0.3em 0 0 0.4em;
+    margin-top: -0.3em;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 2.5em;
+    vertical-align: middle;
+    content: "";
+    border: 0.3em solid;
+    border-width: 0 0.15em 0.15em 0;
+    border-top-width: 0px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 0px;
+    transform: rotateZ(45deg);
+    @media only screen and (max-width: 762px) {
+        margin-left: 1.7em;
+    }
 }
 
 .btn-success {
-  background-color: transparent !important;
-  border-color: transparent !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
 }
 
 .dd-header_title--bold {
-  width: 120px;
-  font-size: 13px;
+    width: 120px;
+    font-size: 13px;
 }
 
 .dd-header_action p {
-  margin-left: -11px;
-  color: $mainColor;
+    margin-left: -11px;
+    color: $mainColor;
 }
 
 .x {
-  position: relative;
-  right: -17px;
-  vertical-align: left;
-  border: none;
-  background-color: transparent;
-  padding: 10px;
-  margin-bottom: 0rem !important;
+    position: relative;
+    right: -17px;
+    vertical-align: left;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 0rem !important;
 }
 
 .spanX {
-  position: absolute;
-  text-align: right;
+    position: absolute;
+    text-align: right;
 }
 
 .y {
-  position: relative;
-  right: -86px;
-  vertical-align: left;
-  margin-bottom: 0rem !important;
+    position: relative;
+    right: -86px;
+    vertical-align: left;
+    margin-bottom: 0rem !important;
 }
 
 .spanY {
-  position: absolute;
-  text-align: right;
+    position: absolute;
+    text-align: right;
 }
 
 .clear {
-  position: absolute;
-  right: 5px;
-  margin-top: 2px;
-  background-color: $bgColor;
-  border: none;
+    position: absolute;
+    right: 5px;
+    margin-top: 2px;
+    background-color: $bgColor;
+    border: none;
 }
 
 .selection {
-  font-family: $fontFamily;
-  font-size: 12px;
-  background-color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1;
+    font-family: $fontFamily;
+    font-size: 12px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .selectionList {
-  width: 157px;
-  color: $redButton;
-  font-size: 12px;
-  list-style-type: none;
-  display: block;
-  margin-left: -32px;
-  margin-bottom: 12px;
-  z-index: 1;
+    width: 157px;
+    color: $redButton;
+    font-size: 12px;
+    list-style-type: none;
+    display: block;
+    margin-left: -32px;
+    margin-bottom: 12px;
+    z-index: 1;
 }
 
 .selectionList li {
-  padding: 2px;
+    padding: 2px;
 }
 
 .listLarge {
-  width: 125px;
-  position: relative;
-  top: 0px !important;
-  left: -4px;
-  background-color: white;
-  display: flex;
-  flex-direction: row;
-  z-index: 1001;
+    width: 125px;
+    position: relative;
+    top: 0px !important;
+    left: -4px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    z-index: 1001;
 }
 
 .listSmall {
-  width: 125px;
-  position: relative;
-  top: -40px !important;
-  left: -140px;
-  background-color: white;
-  padding: 1px;
-  z-index: 1001;
+    width: 125px;
+    position: relative;
+    top: -40px !important;
+    left: -140px;
+    background-color: white;
+    padding: 1px;
+    z-index: 1001;
 }
 
 .languages::after {
-  display: none;
+    display: none;
 }
 
 .largeFindMenu {
-  @media only screen and (max-width: 763px) {
-    display: none;
-  }
+    @media only screen and (max-width: 763px) {
+        display: none;
+    }
 }
 
 .smallFindMenu {
-  @media only screen and (max-width: 763px) {
-    display: flex;
-    flex-direction: column;
-    background-color: $bgColor;
-    align-self: flex-start;
-    margin-top: 13px;
-    margin-right: 15px;
-  }
-
-  @media only screen and (min-width: 763px) {
-    display: none;
-  }
+    @media only screen and (max-width: 763px) {
+        display: flex;
+        flex-direction: column;
+        background-color: $bgColor;
+        align-self: flex-start;
+        margin-top: 13px;
+        margin-right: 15px;
+    }
+    @media only screen and (min-width: 763px) {
+        display: none;
+    }
 }
 
 .burger {
-  padding: 10px;
-  margin-left: 83px;
-  margin-bottom: 13px;
-  border: none !important;
-  background-color: transparent !important;
-  align-self: left;
+    padding: 10px;
+    margin-left: 83px;
+    margin-bottom: 13px;
+    border: none !important;
+    background-color: transparent !important;
+    align-self: left;
 }
 
 .smallMenu {
-  margin-left: -137px;
-  margin-top: -40px;
+    margin-left: -137px;
+    margin-top: -40px;
 }
 
 .logo {
-  margin-left: 20px;
-  margin-right: 7px;
+    margin-left: 20px;
+    margin-right: 7px;
 }

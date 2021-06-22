@@ -39,7 +39,7 @@
 }
 
 .matches {
-    font-size: 27px;
+    font-size: 16px;
     margin-top: 100px;
     text-align: center;
     color: #616161;
@@ -94,12 +94,8 @@
     display: flex;
     flex-direction: row !important;
     justify-content: center;
-    align-items: center;
 }
 
-// .show-category p {
-//     text-align: center;
-// }
 .users {
     margin: auto;
     width: 90%;
@@ -109,10 +105,14 @@
 .avatar-description-email {
     width: 67%;
     padding: 20px;
+    text-align: left;
+}
+
+.avatar-description-email p {
+    text-align: center;
 }
 
 .offer-Where {
-    // width: 60%;
     padding: 20px;
 }
 
@@ -147,4 +147,42 @@
     margin: 0;
     padding: 0;
     text-align: left;
+}
+
+.mail {
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+}
+
+.descriptionMail {
+    height: 200px !important;
+}
+
+label {
+    margin-top: 12px;
+}
+
+.mailBorder {
+    border: 2px;
+    border-color: black;
+    color: #868686;
+}
+
+.mailFromTo {
+    display: flex;
+    flex-direction: row;
+}
+
+.mailFromTo p {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.getInContact {
+    @include redButtons()
+}
+
+.sendMail {
+    @include redButtons()
 }

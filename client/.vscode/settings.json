@@ -1,0 +1,5 @@
+{
+    "prettier.endOfLine": "auto",
+    "prettier.singleQuote": true,
+    "prettier.useTabs": true
+}

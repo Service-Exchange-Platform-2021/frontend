@@ -67,7 +67,7 @@ const PwReset = (props) => {
         setNewPassword("");
         setConfirmNewPW("");   
         
-        props.history.push('/login')
+        props.history.push('/logInPage')
     }
 
     useEffect(() => {
