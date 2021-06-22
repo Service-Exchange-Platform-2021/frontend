@@ -34,7 +34,7 @@ const Search = () => {
       ) : (
         <h1 className="noMatches">
           No matches found <br />
-          or you you forgot to login
+          or you forgot to login
         </h1>
       )}
     </>
