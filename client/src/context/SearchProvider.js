@@ -25,6 +25,8 @@ const SearchProvider = (props) => {
     const [currentPage, setCurrentPage] = useState('/');
     const [showHideButton, setShowHideButtons] = useState('block');
     const [showLogout, setShowLogout] = useState('none');
+    const [emailSubject, setEmailSubject] = useState('');
+    const [emailMessage, setEmailMessage] = useState('')
 
     const location = useLocation();
     const history = useHistory();
@@ -154,12 +156,16 @@ const SearchProvider = (props) => {
         firstname,
         setFirstName,
         username,
-        setUserName
+        setUserName,
+        emailSubject, 
+        setEmailSubject,
+        emailMessage, 
+        setEmailMessage
     }
 
     return ( 
-        <
-        SearchContext.Provider value = { values } > { props.children } < /SearchContext.Provider> 
+        
+        <SearchContext.Provider value = { values } > { props.children } </SearchContext.Provider> 
     );
 };
 
