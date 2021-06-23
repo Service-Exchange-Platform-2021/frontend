@@ -15,13 +15,8 @@ const About = () => {
               Mission
             </Card.Title>
             <Card.Text className="about-card-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-              sapiente soluta necessitatibus vel officiis natus neque doloribus,
-              deleniti ullam optio voluptatibus dolores nostrum aut et
-              recusandae quaerat incidunt quidem nesciunt. Iusto aliquam modi
-              nulla voluptate repellendus voluptatibus perferendis eos ea ullam
-              molestias ex beatae fugiat, magnam non dolorem dicta, illo ipsum
-              doloribus dolore id amet! Nobis dolorum ipsa adipisci at?
+            Our mission is to connect people from all over the world in order to share skills and even more than that: form reliable networks. We base our work on the 4 Es: Exchange of Professionalism and
+Expertise, Establishment of Human Interaction and Connection, Enhancement and Improvement of Human Communication, Empowerment of the Individual.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -33,13 +28,8 @@ const About = () => {
               Vision
             </Card.Title>
             <Card.Text className="about-card-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil,
-              sapiente soluta necessitatibus vel officiis natus neque doloribus,
-              deleniti ullam optio voluptatibus dolores nostrum aut et
-              recusandae quaerat incidunt quidem nesciunt. Iusto aliquam modi
-              nulla voluptate repellendus voluptatibus perferendis eos ea ullam
-              molestias ex beatae fugiat, magnam non dolorem dicta, illo ipsum
-              doloribus dolore id amet! Nobis dolorum ipsa adipisci at?
+            Our platfrom aims to be much more than just an App, we envision it as a social media platfrom on which people can interconnect and share their 
+             various experiences with our services.
             </Card.Text>
           </Card.Body>
         </Card>
