@@ -10,7 +10,7 @@ const MailForm = ({ toEmail }) => {
 
 	const context = useContext(SearchContext);
 	const { userInfo, emailSubject, setEmailSubject, emailMessage, setEmailMessage } = context;
-	console.log(userInfo);
+	
 	const { user } = userInfo;
 
 	const handleMail = async(e) => {
@@ -40,8 +40,7 @@ const MailForm = ({ toEmail }) => {
 			setEmailResponse(response.data.msg)
             
         } catch (err) {
-        console.log(`Something went wrong ${err}`);  
-				
+        console.log(`Something went wrong ${err}`);  				
         }
     };
 
@@ -57,7 +56,7 @@ const MailForm = ({ toEmail }) => {
 					</div>
 					<Form.Label> Subject </Form.Label>{' '}
 					<Form.Control onChange = {(e) => setEmailSubject(e.target.value) } type="text" name="subject" placeholder="title of your message" />
-					<Form.Label> Description </Form.Label>{' '}
+					<Form.Label> Message </Form.Label>{' '}
 					<Form.Control
 						className="descriptionMail"
 						type="text"
