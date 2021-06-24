@@ -3,16 +3,23 @@ import SearchContext from '../context/SearchContext';
 import Mail from './Mail';
 
 const SearchResult = ({ result }) => {
+
 	const [emailShow, setEmailShow] = useState(false);
+	const [colorBtn, setColorBtn] = useState("true");
 	const context = useContext(SearchContext);
+	
+	let bgColor = colorBtn ? "$redButton" : "#7c7c7c"
 
 	const { userInfo } = context;
 
 	const { avatar_url, country, description, email, region, skills, username } =
 		result;
 
+		// console.log("what's there", result);
+
 	const mailMe = () => {
 		setEmailShow(true);
+		setColorBtn()
 	};
 
 	return (
@@ -64,7 +71,11 @@ const SearchResult = ({ result }) => {
 							<span>
 								{' '}
 								{email ? (
-									<button className="getInContact" onClick={mailMe}>get in contact</button>
+									<button className="getInContact" onClick={mailMe}
+									style={{backgroundColor: bgColor}}
+									>
+										get in contact
+									</button>
 								) : (
 									<p className="redFont">
 										please logged in to see the <strong>e-mail</strong>{' '}
