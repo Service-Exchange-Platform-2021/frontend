@@ -15,10 +15,10 @@ const SearchProvider = (props) => {
     const [newPassword, setNewPassword] = useState('');
     const [password, setPassWord] = useState('');
     const [email, setEmail] = useState('');
-    const [alertEM, setAlertEM] = useState(false);
-    const [alertPW, setAlertPW] = useState(false);
+    // const [alertEM, setAlertEM] = useState(false);
+    // const [alertPW, setAlertPW] = useState(false);
     const [confirmNewPW, setConfirmNewPW] = useState('');
-    const [alertPWCheck, setAlertPWCheck] = useState(false);
+    // const [alertPWCheck, setAlertPWCheck] = useState(false);
     const [searchResults, setSearchResults] = useState([]);
     const [itemSkills, setItemSkills] = useState([]);
     const [show, setShow] = useState('none');
@@ -124,18 +124,18 @@ const SearchProvider = (props) => {
         setShowSkillsSelection,
         email,
         setEmail,
-        alertEM,
-        setAlertEM,
+        // alertEM,
+        // setAlertEM,
         password,
         setPassWord,
         newPassword,
         setNewPassword,
-        alertPW,
-        setAlertPW,
+        // alertPW,
+        // setAlertPW,
         confirmNewPW,
         setConfirmNewPW,
-        alertPWCheck,
-        setAlertPWCheck,
+        // alertPWCheck,
+        // setAlertPWCheck,
         searchResults,
         setSearchResults,
         itemSkills,
