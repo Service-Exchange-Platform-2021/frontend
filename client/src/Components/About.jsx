@@ -28,7 +28,7 @@ Expertise, Establishment of Human Interaction and Connection, Enhancement and Im
               Vision
             </Card.Title>
             <Card.Text className="about-card-text">
-            Our platfrom aims to be much more than just an App, we envision it as a social media platfrom on which people can interconnect and share their 
+            Our platform aims to be much more than just an App, we envision it as a social media platfrom on which people can interconnect and share their 
              various experiences with our services.
             </Card.Text>
           </Card.Body>
