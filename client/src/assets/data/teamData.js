@@ -46,7 +46,7 @@ const team = [
     image:
       Shihchen,
     name: "Shih-chen Chao",
-    title: "Project leader, back-end developer and front-end de-bugger",
+    title: "Project leader and Full-stack Developer",
     quote:
       "As swift as wind, as gentle as forest, as fierce as fire, as unshakable as mountain.",
   },
