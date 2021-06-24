@@ -1,48 +1,54 @@
+import Maja from "../images/Maja_3.jpg";
+import Jon from "../images/Jon.jpeg";
+import Nargiza from "../images/Nargiza.jpg";
+import Ljiljana from "../images/Ljiljana.png";
+import Shihchen from "../images/Shih-chen.jpg";
+
 const team = [
   {
     id: 1,
     image:
-      "https://res.cloudinary.com/dbiqsk9jz/image/upload/v1612429774/samples/people/bicycle.jpg",
+      Maja,
     name: "Maja Marek",
-    title: "content manager",
+    title: "Front-end developer and designer",
     quote:
-      "Life imposes things on you that you can’t control, but you still have the choice of how you’re going to live through this.",
+      "It's ok to make mistakes, as long as we learn from them.",
   },
   {
     id: 2,
     image:
-      "https://res.cloudinary.com/dbiqsk9jz/image/upload/v1612429770/samples/people/smiling-man.jpg",
+      Jon,
     name: "Ion Chircu",
-    title: "web-developer",
+    title: "Content and database manager",
     quote:
-      "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven’t found it yet, keep looking. Don’t settle. As with all matters of the heart, you’ll know when you find it.",
+      "You miss 100% of the shots you don't take.",
   },
   {
     id: 3,
     image:
-      "https://res.cloudinary.com/dbiqsk9jz/image/upload/v1612429774/samples/people/bicycle.jpg",
+      Nargiza,
     name: "Nargiza Rysmendieva",
-    title: "content manager",
+    title: "Front-end developer and designer",
     quote:
-      "Life imposes things on you that you can’t control, but you still have the choice of how you’re going to live through this.",
+      "The man who moves a mountain begins by carrying away small stones.",
   },
   {
     id: 4,
     image:
-      "https://res.cloudinary.com/dbiqsk9jz/image/upload/v1612429774/samples/people/bicycle.jpg",
+      Ljiljana,
     name: "Ljiljana Bagaric",
-    title: "content manager",
+    title: "Front-end developer and designer",
     quote:
-      "Life imposes things on you that you can’t control, but you still have the choice of how you’re going to live through this.",
+      "Nothing in life is worthwhile unless you take risks. Fall forward. Every failed experiment is one step closer to success.",
   },
   {
     id: 5,
     image:
-      "https://res.cloudinary.com/dbiqsk9jz/image/upload/v1612429774/samples/people/bicycle.jpg",
+      Shihchen,
     name: "Shih-chen Chao",
-    title: "content manager",
+    title: "Project leader and Full-stack Developer",
     quote:
-      "Life imposes things on you that you can’t control, but you still have the choice of how you’re going to live through this.",
+      "As swift as wind, as gentle as forest, as fierce as fire, as unshakable as mountain.",
   },
 ];
 
