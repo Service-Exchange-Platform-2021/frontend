@@ -47,7 +47,7 @@ const PwReset = (props) => {
         const isPwValid = pwValidator.test(newPassword);
 
         if(!isPwValid){
-            alert('please enter a valid password!')
+            alert('please enter a valid password following the password rule!')
             // setAlertPW(true)
             // setTimeout(() => {
             //     setAlertPW(false)

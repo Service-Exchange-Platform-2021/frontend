@@ -77,11 +77,12 @@ const ChangePassword = () => {
             //             { console.log(err.message) }
             //         }
             if(isPwValid && (newPassword === confirmNewPW)) {
-                     updatePW();   
+                     updatePW();           
                      
-                     setNewPassword("");
-                     setConfirmNewPW("");
                 }   
+
+                setNewPassword("");
+                setConfirmNewPW("");
             }             
 
     return (

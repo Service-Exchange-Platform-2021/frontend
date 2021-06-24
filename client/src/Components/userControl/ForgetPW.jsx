@@ -42,11 +42,9 @@ const ForgetPW = () => {
       // }, 5000);
       // return false;
     } else {
-
-    postEmail(email);
-
-    setEmail("");
-    }
+    postEmail(email);   
+    } 
+      setEmail("");
   };
 
   const changeEmail = (e) => {
