@@ -12,7 +12,7 @@ const Register = (props) => {
   const [confirmPW, setConfirmPW] = useState("");
   const [preview, setPreview] = useState("");
   const [savedImage, setSavedImage] = useState("");
-
+  
   //we bring in the store at this point
   const context = useContext(searchContext);
   const history = useHistory()
@@ -21,14 +21,17 @@ const Register = (props) => {
     email,
     setEmail,
     password,
-    setPassword,
+    setPassWord,
     country,
     setCountry,
     region,
     setRegion,
-    alertPW,
-    alertPWCheck,
-    alertEM,
+    // alertPW,
+    // setAlertPW,
+    // alertPWCheck,
+    // setAlertPWCheck,
+    // alertEM,
+    // setAlertEM,
     offerSelection,
     setOfferSelection,
     itemSkills,
@@ -94,36 +97,40 @@ console.log(data);
     //No whitespaces. use https://regexr.com/ and https://regex101.com/ for writing up and testing regex
     //source: https://stackoverflow.com/questions/19605150/regex-for-password-must-contain-at-least-eight-characters-at-least-one-number-a (section 6)
 
-    // const emailValidator = /^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,15}$/
-    // const isEmValid = emailValidator.test(email);
+    const emailValidator = /^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,15}$/
+    const isEmValid = emailValidator.test(email);
 
-    // if(!isEmValid ){
-    //     setAlertEM(true)
-    //     setTimeout(() => {
-    //         setAlertEM(false)
-    //     }, 5000);
-    //     return false;
-    // }
+    if(!isEmValid ){
+      alert('please enter a valid email address!')
+        // setAlertEM(true)
+        // setTimeout(() => {
+        //     setAlertEM(false)
+        // }, 5000);
+        // return false;
+    }
 
-    // const pwValidator = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])([a-zA-Z0-9@$!%*?&]{8,12})$/
-    // const isPwValid = pwValidator.test(password);
+    const pwValidator = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])([a-zA-Z0-9@$!%*?&]{8,12})$/
+    const isPwValid = pwValidator.test(password);
 
-    // if(!isPwValid){
-    //     setAlertPW(true)
-    //     setTimeout(() => {
-    //         setAlertPW(false)
-    //     }, 5000);
-    //     return false;
-    // }
+    if(!isPwValid){
+      alert('please follow the instruction of setting password' )
+        // setAlertPW(true)
+        // setTimeout(() => {
+        //     setAlertPW(false)
+        // }, 5000);
+        // return false;
+    }
 
-    // if ((isEmValid && isPwValid) && (password!==confirmPW)) {
-    //     setAlertPWCheck(true)
-    //     setTimeout(() => {
-    //         setAlertPWCheck(false)
-    //     }, 5000);
-    //     return false;
-    // }
+    if ((isEmValid && isPwValid) && (password!==confirmPW)) {
+        alert('inconsistent password!')
+        // setAlertPWCheck(true)
+        // setTimeout(() => {
+        //     setAlertPWCheck(false)
+        // }, 5000);
+        // return false;
+    }
 
+    if (isEmValid && isPwValid && (password===confirmPW)) {
     postNewUser(
       firstname,
       lastname,
@@ -134,23 +141,28 @@ console.log(data);
       password,
       confirmPW,
       savedImage,
-      offerSelection,
-      
-    );
+      offerSelection,      
+    );  
+     
+     setFirstName("");
+     setLastName("");
+     setCountry("");
+     setRegion("");
+     setEmail("");
+     setUserName("");
+     setPassWord("");
+     setConfirmPW("");
 
-    //  setFirstName("");
-    //  setLastName("");
-    //  setCountry("");
-    //  setRegion("");
-    //  setEmail("");
-    //  setUserName("");
-    //  setPassWord("");
-    //  setConfirmPW("");
+     setPreview(null);
+     setSavedImage(null);
 
-    //  setPreview(null);
-    //  setSavedImage(null);
+     setOfferSelection([]);
 
-    //  setOfferSelection([]);
+    } else {     
+     setEmail("");
+     setPassWord("");
+     setConfirmPW("");
+    }   
   };
 
   const changeFirstName = (e) => {
@@ -170,7 +182,7 @@ console.log(data);
   };
 
   const changePassWord = (e) => {
-    setPassword(e.target.value);
+    setPassWord(e.target.value);
   };
 
   const changeConfirmPW = (e) => {
@@ -231,9 +243,9 @@ console.log(data);
         password={password}
         confirmPW={confirmPW}
         offerSelection={offerSelection}
-        alertEM={alertEM}
-        alertPW={alertPW}
-        alertPWCheck={alertPWCheck}
+        // alertEM={alertEM}
+        // alertPW={alertPW}
+        // alertPWCheck={alertPWCheck}
         //props passing to grandchild of Avatar
         // take onClose off to deactivate it
         // onClose = { onClose }

@@ -16,9 +16,7 @@ const Login = () => {
   const {
     setUserInfo,
     email,
-    setEmail,
-    alertEM,
-    alertPW,
+    setEmail,   
     setShowHideButtons,
     setShowLogout,
     currentPage,
@@ -28,7 +26,7 @@ const Login = () => {
 
 
   const [password, setPassWord] = useState("");
-  const [rememberMe, setRememberMe] = useState(false);
+  // const [rememberMe, setRememberMe] = useState(false);
 
   const postReturnedUser = (email, password) => {
     const data = { email, password };
@@ -102,7 +100,7 @@ const Login = () => {
 
     setEmail("");
     setPassWord("");
-    setRememberMe(false);
+    // setRememberMe(false);
   };
 
   //   const saveOnLocal = (key, initialValue) => {
@@ -138,9 +136,9 @@ const Login = () => {
     setPassWord(e.target.value);
   };
 
-  const changeRM = (e) => {
-    setRememberMe(e.target.checked);
-  };
+  // const changeRM = (e) => {
+  //   setRememberMe(e.target.checked);
+  // };
 
   return (
     <>
@@ -148,12 +146,12 @@ const Login = () => {
         submitHandler={submitHandler}
         changeEmail={changeEmail}
         changePW={changePW}
-        changeRM={changeRM}
+        // changeRM={changeRM}
         email={email}
         password={password}
-        rememberMe={rememberMe}
-        alertEM={alertEM}
-        alertPW={alertPW}
+        // rememberMe={rememberMe}
+        // alertEM={alertEM}
+        // alertPW={alertPW}
       />
     </>
   );

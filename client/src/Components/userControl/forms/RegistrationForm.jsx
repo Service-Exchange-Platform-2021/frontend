@@ -1,16 +1,15 @@
 import React, { useRef, useEffect, useContext } from "react"
 import SkillsMenu from '../../SkillsMenuLarge'
 //import items from '../../../assets/data/itemsSkills'
-import MyAlert from "../layout/Alert";
+// import MyAlert from "../layout/Alert";
 import ButtonMU from "../layout/ButtonMU";
-import Main from '../../Main'
+
 
 //3rd party package
 import RegionCountrySelector from "../selector/RegionCountrySelector";
 import AvatarUploader from "../upload-edit/AvatarUploader";
 
 const RegistrationForm = (props) => {
-
   
   const firstnameRef = useRef()
 
@@ -190,7 +189,7 @@ const RegistrationForm = (props) => {
                       Submit
                     </button>
                   </div>
-                  <div className="form-group col-lg-9">
+                  {/* <div className="form-group col-lg-9">
                     {props.alertEM && (
                       <MyAlert
                         alertType={"warning"}
@@ -212,7 +211,7 @@ const RegistrationForm = (props) => {
                         alertMessage={"Inconsistent Password!"}
                       />
                     )}
-                  </div>
+                  </div> */}
                 </div>
               </form>
             </div>

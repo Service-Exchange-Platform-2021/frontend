@@ -1,9 +1,11 @@
 import React, {useRef, useEffect} from 'react'
-import MyAlert from "../layout/Alert";
+//import MyAlert from "../layout/Alert";
 import ButtonMU from "../layout/ButtonMU";
 import Main from '../../Main';
 
 const ForgetPWForm = (props) => {
+
+  // const props = {postEmail, submitHandler, changeEmail, email}  
 
   const emailRef = useRef()
 
@@ -50,14 +52,14 @@ const ForgetPWForm = (props) => {
                         Reset
                       </button>
                     </div>
-                    <br />
+                    {/* <br />
                     {props.alertEM && (
                       <MyAlert
                         alertType={"danger"}
                         alertHeading={"Error!"}
                         alertMessage={"Please Enter A Valid Email "}
                       />
-                    )}               
+                    )}                */}
                   </div>
                 </div>
               </form>

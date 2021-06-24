@@ -7,7 +7,7 @@ const PwReset = (props) => {
 
     const context = useContext(searchContext);
 
-    const {newPassword, setNewPassword, alertPW, setAlertPW, confirmNewPW, setConfirmNewPW, alertPWCheck, setAlertPWCheck} = context;
+    const {newPassword, setNewPassword, confirmNewPW, setConfirmNewPW} = context;
 
     //frontend url: http://localhost:3000/reset_password/thisisthetoken
     console.log(props.match.params.token)
@@ -43,31 +43,45 @@ const PwReset = (props) => {
         const submitHandler = (e) => {
         e.preventDefault();
 
-        // const pwValidator = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])([a-zA-Z0-9@$!%*?&]{8,12})$/
-        // const isPwValid = pwValidator.test(newPassword);
+        const pwValidator = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])([a-zA-Z0-9@$!%*?&]{8,12})$/
+        const isPwValid = pwValidator.test(newPassword);
 
-        // if(!isPwValid){
-        //     setAlertPW(true)
-        //     setTimeout(() => {
-        //         setAlertPW(false)
-        //     }, 20000); 
-        //     return false;                    
-        // }        
-
-        if(newPassword !== confirmNewPW) {
-            setAlertPWCheck(true)
-            setTimeout(()=>{
-                setAlertPWCheck(false)
-            }, 5000);
-            return false;
+        if(!isPwValid){
+            alert('please enter a valid password!')
+            // setAlertPW(true)
+            // setTimeout(() => {
+            //     setAlertPW(false)
+            // }, 20000); 
+            // return false;                    
         }        
 
+        if(newPassword !== confirmNewPW) {
+            alert('please make sure the 1st and the 2nd passwords are consistent')
+            // setAlertPWCheck(true)
+            // setTimeout(()=>{
+            //     setAlertPWCheck(false)
+            // }, 5000);
+            // return false;
+        }        
+
+        if(isPwValid && (newPassword === confirmNewPW)) {
         updatePW();
         
+        alert("You just reset your password!")
+
         setNewPassword("");
         setConfirmNewPW("");   
         
         props.history.push('/logInPage')
+
+        } else { 
+            alert("Please go back to your email account and re-click the password reset link within 60 mins for password resetting!")  
+
+            setNewPassword("");
+            setConfirmNewPW(""); 
+            
+            props.history.push('/');
+        }
     }
 
     useEffect(() => {
@@ -97,10 +111,10 @@ const PwReset = (props) => {
                         changeNewPW }
                     changeConfirmNewPW = {
                         changeConfirmNewPW }
-                    alertPWCheck = {
-                        alertPWCheck } 
-                    alertPW = {
-                        alertPW }       
+                    // alertPWCheck = {
+                    //     alertPWCheck } 
+                    // alertPW = {
+                    //     alertPW }       
             />    
         </>
     )
