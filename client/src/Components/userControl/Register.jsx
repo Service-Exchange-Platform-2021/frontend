@@ -88,8 +88,7 @@ console.log(data);
   };
 
   const submitHandler = (e) => {
-        e.preventDefault();     
-
+        e.preventDefault();  
 
     //email validator source:
     //At least 8 characters long;
@@ -158,7 +157,8 @@ console.log(data);
 
      setOfferSelection([]);
 
-    } else {     
+    } else {   
+        
      setEmail("");
      setPassWord("");
      setConfirmPW("");
