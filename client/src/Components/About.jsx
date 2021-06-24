@@ -22,12 +22,12 @@ Expertise, Establishment of Human Interaction and Connection, Enhancement and Im
         </Card>
 
         <Card style={{lineHeight:"32px"}} className="about-card">
-          <Card.Body style={{textAlign:"center"}} className="about-card-body">
+          <Card.Body style={{textAlign:"center"}} className="about-card-body vision">
             <FaMedapps className="icons" />
             <Card.Title className="about-card-title">
               Vision
             </Card.Title>
-            <Card.Text className="about-card-text">
+            <Card.Text className="about-card-text vision">
             Our platfrom aims to be much more than just an App, we envision it as a social media platfrom on which people can interconnect and share their 
              various experiences with our services.
             </Card.Text>
