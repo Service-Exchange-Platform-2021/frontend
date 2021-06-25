@@ -27,8 +27,7 @@ const About = () => {
               Vision
             </Card.Title>
             <Card.Text className="about-card-text">
-            Our platform aims to be much more than just an App, we envision it as a social media platform on which people can interconnect and share their 
-             various experiences with our services. We are looking forward to expanding our product and making it as optimal as possible, with the help of all our users. Customer satisfaction is our ultimate goal.
+             Our platform aims to be much more than just an App, we envision it as a social media platform on which people can interconnect and share their various experiences with our services. We are looking forward to expanding our product and making it as optimal as possible, with the help and feedback of all our users. Customer satisfaction is our ultimate goal.
             </Card.Text>
           </Card.Body>
         </Card>
