@@ -15,8 +15,7 @@ const About = () => {
               Mission
             </Card.Title>
             <Card.Text className="about-card-text">
-            Our mission is to connect people from all over the world in order to share skills and even more than that: form reliable networks. We base our work on the 4 Es: Exchange of Professionalism and
-Expertise, Establishment of Human Interaction and Connection, Enhancement and Improvement of Human Communication, Empowerment of the Individual.
+            Our mission is to connect people from all over the world in order to share skills and even more than that: form reliable networks. We base our work on the 4 Es: Exchange of Professionalism and Expertise, Establishment of Human Interaction and Connection, Enhancement and Improvement of Human Communication, Empowerment of the Individual.
             </Card.Text>
           </Card.Body>
         </Card>
