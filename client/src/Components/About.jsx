@@ -21,7 +21,7 @@ const About = () => {
         </Card>
 
         <Card style={{lineHeight:"32px"}} className="about-card">
-          <Card.Body style={{textAlign:"center"}} className="about-card-body">
+          <Card.Body style={{textAlign:"center"}} className="about-card-body vision">
             <FaMedapps className="icons" />
             <Card.Title className="about-card-title">
               Vision
