@@ -28,7 +28,7 @@ const ChangeDescription = () => {
     const postNewDescription = (description) => {
 
         const data = { description };
-        const config = { headers: { authorization: 'Bearer '+userInfo.token } }
+        const config = { headers: { authorization: userInfo.token } }
         axios.patch('http://localhost:4000/profile', data, config)
             //we do not need res.json in axios at all
             .then(res => {
