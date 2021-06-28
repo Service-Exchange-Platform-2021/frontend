@@ -47,7 +47,7 @@ const SearchProvider = (props) => {
         setLookSelection(selection);
     };
 
-    console.log('Information about user', userInfo);
+    //console.log('Information about user', userInfo);
 
     const goLogin = () => {
         if (

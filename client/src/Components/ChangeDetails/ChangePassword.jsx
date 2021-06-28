@@ -8,57 +8,57 @@ const ChangePassword = () => {
 
     const history = useHistory()
     const context = useContext(SearchContext)
-    const { userInfo, 
-            newPassword,
-            setNewPassword,
-            confirmNewPW, 
-            setConfirmNewPW,            
-             } = context
+    const { 
+        userInfo, 
+        newPassword,
+        setNewPassword,
+        confirmNewPW, 
+        setConfirmNewPW,            
+    } = context
 
-             //the axios.create does not work, why?
-             const updatePW = async() => {
-                try {
-                    const config = {
-                        headers: { authorization: 'Bearer '+userInfo.token, 
-                                    "Content-Type": "application/json" },
-                    };
-                    const data = { newPassword };
-                    const response = await axios.post(
-                        'http://localhost:4000/profile/change_password',
-                        data,
-                        config
-                    );
-                    
-                    if (response){
-                        alert('Your password has been changed! Remember to use your new password next time you log in ')
-                    }
-                } catch (err) {
-                console.log(`Something went wrong ${err}`);                
-                }
-        }
-
-            const changePassWord = (e) => {
-                setNewPassword(e.target.value);
-            }
-        
-            const changeConfirmPW = (e) =>{
-                setConfirmNewPW(e.target.value)
+    //the axios.create does not work, why?
+    const updatePW = async() => {
+        try {
+            const config = {
+                headers: { authorization: 'Bearer ' + userInfo.token, 
+                            "Content-Type": "application/json" },
             };
+            const data = { newPassword };
+            const response = await axios.post(
+                'http://localhost:4000/profile/change_password',
+                data,
+                config
+            );
+            
+            if (response){
+                alert('Your password has been changed! Remember to use your new password next time you log in ')
+            }
+        } catch (err) {
+        console.log(`Something went wrong ${err}`);                
+        }
+    }
 
-            const submitHandler = (e) => {
-                e.preventDefault();
-        
-                const pwValidator = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])([a-zA-Z0-9@$!%*?&]{8,12})$/
-                const isPwValid = pwValidator.test(newPassword);
-        
-                if(!isPwValid){
-                    alert('please follow the instruction of setting password' )                                       
-                }        
-        
-                if(newPassword !== confirmNewPW) {
-                    alert('inconsistent password!')                  
-                }
-               
+    const changePassWord = (e) => {
+        setNewPassword(e.target.value);
+    }
+
+    const changeConfirmPW = (e) =>{
+        setConfirmNewPW(e.target.value)
+    };
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+
+        const pwValidator = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])([a-zA-Z0-9@$!%*?&]{8,12})$/
+        const isPwValid = pwValidator.test(newPassword);
+
+        if(!isPwValid){
+            alert('please follow the instruction of setting password' )                                       
+        }        
+
+        if(newPassword !== confirmNewPW) {
+            alert('inconsistent password!')                  
+        }               
 
             //     const url = `http://localhost:4000/profile`
             //     const authAxios = axios.create({
@@ -76,14 +76,14 @@ const ChangePassword = () => {
             //             } catch(err)
             //             { console.log(err.message) }
             //         }
-            if(isPwValid && (newPassword === confirmNewPW)) {
-                     updatePW();           
-                     
-                }   
+            
+        if(isPwValid && (newPassword === confirmNewPW)) {
+                    updatePW();                    
+            }   
 
-                setNewPassword("");
-                setConfirmNewPW("");
-            }             
+        setNewPassword("");
+        setConfirmNewPW("");
+    }             
 
     return (
 
