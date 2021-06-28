@@ -64,7 +64,7 @@ const RegistrationForm = (props) => {
                     />
                   </div>
 
-                  <div className="form-group col-lg-10">
+                  <div className="form-group col-lg-12">
                     <label>Country</label>
                     
                     <RegionCountrySelector
