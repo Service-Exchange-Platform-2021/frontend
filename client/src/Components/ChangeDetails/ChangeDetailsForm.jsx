@@ -107,10 +107,8 @@ const ChangeDetailsForm = (props) => {
                       // items={items}
                       items={itemSkills}
                       multiSelect
-                      selection={lookSelection}
-                      handleSelection={handleLookSelection}
-                      showSkillsSelection={showSkillsSelection}
-                      setShowSkillsSelection={setShowSkillsSelection}
+                      selection={props.offerSelection}
+                      handleSelection={props.changeOfferSelection}
                     />
                     <div className="skills outcome">
                       {props.offerSelection.length > 0 ?
