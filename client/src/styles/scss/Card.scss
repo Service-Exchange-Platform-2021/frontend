@@ -4,10 +4,14 @@
     margin-top: 70px;
     margin-left: 30px;
     width: 95%;
-    min-height: 500px;
+    min-height: 550px;
     background: white;
     border-radius: 10px;
     box-shadow: 0px 1px 10px 1px black;
+}
+
+.password-body {
+    margin: 1rem 12rem;
 }
 
 .upper-container {
@@ -27,6 +31,7 @@
     color: white;
     font-weight: 700;
     font-size: 1.7rem;
+
 }
 
 .image-container img {
@@ -35,7 +40,8 @@
     height: 170px;
     border-radius: 50%;
     padding: 6px;
-    transform: translate(130px, 20px);
+    transform: translate(100px, 20px);
+
 }
 
 img {
@@ -83,9 +89,9 @@ img {
 
 .about-container {
     margin: 0 2rem;
-    padding: 15px;
+    padding: 25px;
     width: 60%;
-    height: 300px;
+    height: 350px;
     background: $bgColor;
     border-radius: 5px;
     box-shadow: 0px 1px 10px 1px black;
@@ -96,6 +102,15 @@ img {
     animation: ease-in-out;
     transition-duration: 0.5s;
     transform: scale(1.1);
+}
+
+.change-button {
+    margin-left: 1rem;
+
+}
+
+.country {
+    margin: 2rem;
 }
 
 .lower-container h4 {
@@ -109,32 +124,200 @@ img {
 .lower-container p {
     margin: 0.5rem;
     font-family: sans-serif;
-    color: gray;
+    color: rgb(2, 2, 2);
     font-weight: 350;
     font-size: 1rem;
     text-align: justify;
 }
 
-.div-center-details {
-
-    font-family: $fontFamily;
-    font-size: 13px;
-    color: $mainColor;
-    border: none;
-}
-
-.form-row-details {
-    display: flex;
-    flex-direction: row;
-    color: red;
-}
-
-.card-body-details {
-    flex-direction: row;
-}
-
 .description {
-    width: 50rem;
+    width: 500px;
     border-radius: 0.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+.details-body {
+    margin: 0 auto;
+
+}
+
+.details {
+    margin: 1rem;
+}
+
+.skills {
+    margin-top: 2rem;
+    margin-left: 10rem;
+}
+
+.outcome {
+    margin-top: -1rem;
+    margin-left: 20rem;
+}
+
+
+.uploader {
+    margin: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+
+}
+
+
+@media only screen and (max-width:425px) {
+    .Card {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .upper-container .user-name {
+        left: 50%;
+    }
+
+    .upper-container h3 {
+        color: white;
+        font-weight: 700;
+        font-size: 1.7rem;
+    }
+
+    .image-container img {
+        width: 120px;
+        height: 120px;
+        transform: translate(40px, 40px);
+    }
+
+    .lower-container {
+        margin-top: 50px;
+        margin-bottom: 7rem;
+    }
+
+    .user-information {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 100%;
+    }
+
+    .about-container {
+        margin: 10px;
+        width: 100%;
+    }
+
+
+    .description {
+        width: 250px;
+        margin-bottom: 1rem;
+    }
+
+    .lower-container h3 {
+        margin-top: 130px;
+        font-weight: 450;
+        font-size: 1.4rem;
+    }
+
+    .details-body {
+        margin: 0 auto;
+    }
+
+    .details {
+        margin: 1rem;
+    }
+
+    .skills {
+        margin-top: 2rem;
+        margin-left: 5px;
+    }
+
+    .dd-wrapper {
+        color: black;
+    }
+
+    .outcome {
+        margin-top: -1rem;
+        margin-right: 5px;
+    }
+
+    .outcome h4 {
+        text-align: right;
+    }
+
+
+    .password-body {
+        margin: 150px 10px;
+    }
+
+    .uploader {
+        margin: 0 auto;
+        margin-bottom: 5px;
+
+    }
+
+
+
+}
+
+@media only screen and (min-width:426px) and (max-width:1000px) {
+    .Card {
+        margin-left: 0;
+        width: 100%;
+        min-height: 800px;
+
+    }
+
+
+    .user-information {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 100%;
+
+    }
+
+    .about-container {
+        margin: 10px;
+        width: 100%;
+    }
+
+    .description {
+        width: 80%;
+    }
+
+    .lower-container h3 {
+        margin-top: 150px;
+    }
+
+    .details-body {
+        margin: 0 auto;
+
+    }
+
+    .details {
+        margin: 1rem;
+    }
+
+    .skills {
+        margin-top: 2rem;
+        margin-left: 5px;
+    }
+
+    .dd-wrapper {
+        color: black;
+    }
+
+    .outcome {
+        margin-top: -1rem;
+        margin-left: 70px;
+    }
+
+    .outcome h4 {
+        text-align: right;
+    }
+
+    .upload-pic {
+        transform: translate(10rem, -14rem);
+    }
+
+    .password-body {
+        margin: 150px 10px;
+    }
+
+
 }
