@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useContext } from "react"
-import SkillsMenu from '../SkillsMenu'
-import items from '../../assets/data/itemsSkills'
+import SkillsMenu from '../SkillsMenuLarge'
 import MyAlert from "../userControl/layout/Alert";
+import SearchContext from "../../context/SearchContext";
 import { Link } from "react-router-dom";
 
 import RegionCountrySelector from "../userControl/selector/RegionCountrySelector";
@@ -10,10 +10,18 @@ import AvatarUploader from "../userControl/upload-edit/AvatarUploader";
 
 const ChangeDetailsForm = (props) => {
 
-
+  const context = useContext(SearchContext);
 
   const firstnameRef = useRef()
 
+  const {
+    lookSelection,
+    handleLookSelection,
+    setShowSkillsSelection,
+    showSkillsSelection,
+    itemSkills,
+    // setItemSkills
+  } = context;
 
   useEffect(() => {
     firstnameRef.current.focus();
@@ -93,14 +101,17 @@ const ChangeDetailsForm = (props) => {
 
 
                   <div className="form-group col-lg-11 details">
-                    <label>
-                      Skills I can offer</label>
 
                     <SkillsMenu
-                      items={items}
+                      title="Skills I can offer"
+                      // items={items}
+                      items={itemSkills}
                       multiSelect
-                      selection={props.offerSelection}
-                      handleSelection={props.changeOfferSelection} />
+                      selection={lookSelection}
+                      handleSelection={handleLookSelection}
+                      showSkillsSelection={showSkillsSelection}
+                      setShowSkillsSelection={setShowSkillsSelection}
+                    />
                     <div className="skills outcome">
                       {props.offerSelection.length > 0 ?
                         props.offerSelection.map(item => {
@@ -113,7 +124,7 @@ const ChangeDetailsForm = (props) => {
                     </div>
                   </div>
 
-                  <div className="form-group col-lg-11 details">
+                  <div className="uploader">
                     <label>
                       Avatar: Maximal Upload File Size 80 KB
                     </label>
@@ -123,8 +134,10 @@ const ChangeDetailsForm = (props) => {
                         // onClose={props.onClose}
                         onCrop={props.onCrop}
                         onBeforeFileLoad={props.onBeforeFileLoad}
+
                         preview={props.preview}
                         savedImage={props.savedImage}
+
                       />
 
                     </div></div>
