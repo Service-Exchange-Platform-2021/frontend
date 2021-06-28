@@ -113,11 +113,9 @@ const ChangeDetails = () => {
         setLastName(e.target.value);
     }
 
-
     const changeUserName = (e) => {
         setUserName(e.target.value);
     }
-
 
     const changeCountry = (val) => {
         setCountry(val)
@@ -134,7 +132,6 @@ const ChangeDetails = () => {
     //   }
 
     const onCrop = (preview) => {
-
         setPreview(preview);
         setSavedImage(preview);
     }

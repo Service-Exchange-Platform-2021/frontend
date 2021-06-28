@@ -58,8 +58,7 @@ const ChangePassword = () => {
 
         if(newPassword !== confirmNewPW) {
             alert('inconsistent password!')                  
-        }
-               
+        }               
 
             //     const url = `http://localhost:4000/profile`
             //     const authAxios = axios.create({
@@ -77,9 +76,9 @@ const ChangePassword = () => {
             //             } catch(err)
             //             { console.log(err.message) }
             //         }
+            
         if(isPwValid && (newPassword === confirmNewPW)) {
-                    updatePW();           
-                    
+                    updatePW();                    
             }   
 
         setNewPassword("");

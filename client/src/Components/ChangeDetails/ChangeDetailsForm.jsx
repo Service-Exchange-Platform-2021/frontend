@@ -1,12 +1,11 @@
 import React, { useRef, useEffect, useContext } from "react"
 import SkillsMenu from '../SkillsMenuLarge'
-import MyAlert from "../userControl/layout/Alert";
+//import MyAlert from "../userControl/layout/Alert";
 import SearchContext from "../../context/SearchContext";
 import { Link } from "react-router-dom";
 
 import RegionCountrySelector from "../userControl/selector/RegionCountrySelector";
 import AvatarUploader from "../userControl/upload-edit/AvatarUploader";
-
 
 const ChangeDetailsForm = (props) => {
 
@@ -27,9 +26,6 @@ const ChangeDetailsForm = (props) => {
     firstnameRef.current.focus();
 
   }, []);
-
-
-
 
   return (
     <>
@@ -94,11 +90,7 @@ const ChangeDetailsForm = (props) => {
                       setParentCountry={(val) => props.changeCountry(val)}
                       setParentRegion={(val) => props.changeRegion(val)}
                     />
-
                   </div>
-
-
-
 
                   <div className="form-group col-lg-11 details">
 
@@ -150,7 +142,7 @@ const ChangeDetailsForm = (props) => {
                     </button>
                   </div>
 
-                  <div className="form-group col-lg-9">
+                  {/* <div className="form-group col-lg-9">
                     {props.alertEM && (
                       <MyAlert
                         alertType={"warning"}
@@ -172,7 +164,7 @@ const ChangeDetailsForm = (props) => {
                         alertMessage={"Inconsistent Password!"}
                       />
                     )}
-                  </div>
+                  </div> */}
                 </div>
               </form>
             </div>
