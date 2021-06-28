@@ -155,13 +155,14 @@ console.log(data);
      setPreview(null);
      setSavedImage(null);
 
-     setOfferSelection([]);
+    //  setOfferSelection([]);
 
     } else {   
         
      setEmail("");
      setPassWord("");
      setConfirmPW("");
+    //  setOfferSelection([]);
     }   
   };
 
