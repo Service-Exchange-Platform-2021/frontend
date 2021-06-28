@@ -6,8 +6,7 @@ import SearchContext from '../context/SearchContext';
 const MailForm = ({ toEmail, result }) => {
 	const [emailResponse, setEmailResponse] = useState('');
 
-	const context = useContext(SearchContext);
-	// const { userInfo, emailSubject, setEmailSubject, emailMessage, setEmailMessage } = context;
+	const context = useContext(SearchContext);	
 	
 	const {
 		userInfo,
@@ -17,6 +16,7 @@ const MailForm = ({ toEmail, result }) => {
 		setEmailMessage,
 		username
 	} = context;
+
 	console.log(userInfo);
 	const { user } = userInfo;
 
@@ -30,7 +30,9 @@ const MailForm = ({ toEmail, result }) => {
 			message: emailMessage,
 			username: user.username,
 		};
+
 		//post to backend
+
 		try {
 			const config = {
 				headers: {
@@ -69,12 +71,12 @@ const MailForm = ({ toEmail, result }) => {
 					<div className="mailFromTo">
 						<p> From</p>
 						<p className="mailBorder">{user.username}</p>
-						<p>To </p>
+						<p> To </p>
 						<p className="mailBorder">{toEmail}</p>
 					</div>
 					{/* <Form.Label> Subject </Form.Label>{' '}
 					<Form.Control onChange = {(e) => setEmailSubject(e.target.value) } type="text" name="subject" placeholder="title of your message" /> */}
-					<Form.Label> Message </Form.Label>{' '}
+					<Form.Label> Subject </Form.Label>{' '}
 					<Form.Control
 						onChange={(e) => setEmailSubject(e.target.value)}
 						type="text"
