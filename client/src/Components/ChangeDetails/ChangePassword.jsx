@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useContext } from "react"
-import MyAlert from "../userControl/layout/Alert";
+// import MyAlert from "../userControl/layout/Alert";
 import SearchContext from "../../context/SearchContext";
 import { Link, useHistory } from "react-router-dom";
 import axios from 'axios';
@@ -12,11 +12,7 @@ const ChangePassword = () => {
             newPassword,
             setNewPassword,
             confirmNewPW, 
-            setConfirmNewPW,
-            alertPWCheck,
-            setAlertPWCheck, 
-            alertEM,
-            alertPW, 
+            setConfirmNewPW,            
              } = context
 
              //the axios.create does not work, why?
@@ -48,26 +44,19 @@ const ChangePassword = () => {
             const changeConfirmPW = (e) =>{
                 setConfirmNewPW(e.target.value)
             };
+
             const submitHandler = (e) => {
                 e.preventDefault();
         
-                // const pwValidator = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])([a-zA-Z0-9@$!%*?&]{8,12})$/
-                // const isPwValid = pwValidator.test(newPassword);
+                const pwValidator = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])([a-zA-Z0-9@$!%*?&]{8,12})$/
+                const isPwValid = pwValidator.test(newPassword);
         
-                // if(!isPwValid){
-                //     setAlertPW(true)
-                //     setTimeout(() => {
-                //         setAlertPW(false)
-                //     }, 20000); 
-                //     return false;                    
-                // }        
+                if(!isPwValid){
+                    alert('please follow the instruction of setting password' )                                       
+                }        
         
                 if(newPassword !== confirmNewPW) {
-                    setAlertPWCheck(true)
-                    setTimeout(()=>{
-                        setAlertPWCheck(false)
-                    }, 5000);
-                    return false;
+                    alert('inconsistent password!')                  
                 }
                
 
@@ -87,11 +76,14 @@ const ChangePassword = () => {
             //             } catch(err)
             //             { console.log(err.message) }
             //         }
-                     updatePW();   
+            if(isPwValid && (newPassword === confirmNewPW)) {
+                     updatePW();           
                      
-                     setNewPassword("");
-                     setConfirmNewPW("");
-             }                
+                }   
+
+                setNewPassword("");
+                setConfirmNewPW("");
+            }             
 
     return (
 
@@ -138,30 +130,7 @@ const ChangePassword = () => {
                 <div className="form-group col-lg-12 d-flex">
                     <button className="btn btn-primary btn-md"><Link to="/profile">Back to profile</Link>
                     </button>
-                </div>
-                <div className="form-group col-lg-9">
-                    {alertEM && (
-                        <MyAlert
-                            alertType={"warning"}
-                            alertHeading={"Error!"}
-                            alertMessage={"Please Enter A Valid Email "}
-                        />
-                    )}
-                    {alertPW && (
-                        <MyAlert
-                            alertType={"danger"}
-                            alertHeading={"Error!"}
-                            alertMessage={"Please Enter A Valid Password "}
-                        />
-                    )}
-                    {alertPWCheck && (
-                        <MyAlert
-                            alertType={"warning"}
-                            alertHeading={"Error!"}
-                            alertMessage={"Inconsistent Password!"}
-                        />
-                    )}
-                </div>
+                </div>               
 
             </form>
 

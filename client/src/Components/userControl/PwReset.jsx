@@ -8,13 +8,10 @@ const PwReset = () => {
     const context = useContext(searchContext);
     const {userInfo, 
         newPassword, 
-        setNewPassword, 
-        alertPW, 
-        setAlertPW, 
+        setNewPassword,         
         confirmNewPW, 
         setConfirmNewPW, 
-        alertPWCheck, 
-        setAlertPWCheck} = context;
+       } = context;
 
      const changeNewPW = (e) => {
         setNewPassword(e.target.value);
@@ -30,21 +27,25 @@ const PwReset = () => {
         // const pwValidator = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])([a-zA-Z0-9@$!%*?&]{8,12})$/
         // const isPwValid = pwValidator.test(newPassword);
 
-        // if(!isPwValid){
-        //     setAlertPW(true)
-        //     setTimeout(() => {
-        //         setAlertPW(false)
-        //     }, 20000); 
-        //     return false;                    
-        // }        
+        if(!isPwValid){
+            alert('please enter a valid password!')
+            // setAlertPW(true)
+            // setTimeout(() => {
+            //     setAlertPW(false)
+            // }, 20000); 
+            // return false;                    
+        }        
 
         if(newPassword !== confirmNewPW) {
-            setAlertPWCheck(true)
-            setTimeout(()=>{
-                setAlertPWCheck(false)
-            }, 5000);
-            return false;
-        }
+            alert('please make sure the 1st and the 2nd passwords are consistent')
+            // setAlertPWCheck(true)
+            // setTimeout(()=>{
+            //     setAlertPWCheck(false)
+            // }, 5000);
+            // return false;
+            }
+        
+        if(isPwValid && (newPassword !== confirmNewPW)) {
 
         const url = `http://localhost:4000/`
         const authAxios = axios.create({
@@ -62,6 +63,7 @@ const PwReset = () => {
                 { console.log(err.message) }
             }
             updatePW();           
+        }
     }
 
     return (

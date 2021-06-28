@@ -8,7 +8,7 @@ const ForgetPW = () => {
   
   const context = useContext(searchContext);
 
-  const { email, setEmail, alertEM, setAlertEM } = context;
+  const { email, setEmail } = context;
 
   const postEmail = (email) => {
     const data = { email };
@@ -35,16 +35,16 @@ const ForgetPW = () => {
     const isEmailValid = emailValidator.test(email);
 
     if (!isEmailValid) {
-      setAlertEM(true);
-      setTimeout(() => {
-        setAlertEM(false);
-      }, 5000);
-      return false;
-    }
-
-    postEmail(email);
-
-    setEmail("");
+      alert('please enter a valid email address')
+      // setAlertEM(true);
+      // setTimeout(() => {
+      //   setAlertEM(false);
+      // }, 5000);
+      // return false;
+    } else {
+    postEmail(email);   
+    } 
+      setEmail("");
   };
 
   const changeEmail = (e) => {
@@ -57,8 +57,7 @@ const ForgetPW = () => {
         postEmail={postEmail}
         submitHandler={submitHandler}
         changeEmail={changeEmail}
-        email={email}
-        alertEM={alertEM}
+        email={email}       
       />
     </>
   );

@@ -1,7 +1,7 @@
 import React, { useRef, useEffect} from "react";
 import { Link } from "react-router-dom";
-import Main from '../../Main'
-import MyAlert from "../layout/Alert";
+// import Main from '../../Main'
+// import MyAlert from "../layout/Alert";
 import ButtonMU from "../layout/ButtonMU";
 
 //import FontAweSomeIcon and library modules, then set up your own icon library to avoid overloading with other unused icons
@@ -94,7 +94,7 @@ const LoginForm = (props) => {
                       />
                     </div>
 
-                    <div className="form-check form-group ml-4 col-lg-2">
+                    {/* <div className="form-check form-group ml-4 col-lg-2">
                       <input
                         type="checkbox"
                         className="form-check-input"
@@ -103,9 +103,9 @@ const LoginForm = (props) => {
                         //in theory onClick should be used but Chrome prefers onChange here
                       />
                       <label> Remember Me </label>
-                    </div>
+                    </div> */}
 
-                    <div className="form-check form-group col-lg-3">
+                    <div className="form-check form-group col-lg-5">
                       <button type="submit" className="btn btn-primary btn-sm"
                       >
                         Login
@@ -126,7 +126,7 @@ const LoginForm = (props) => {
                       </Link>                       
                     </h6>
 
-                <div className="row">
+                {/* <div className="row">
                   <div className="col-lg-12">
                     {props.alertEM && (
                       <MyAlert
@@ -143,7 +143,7 @@ const LoginForm = (props) => {
                       />
                     )}
                   </div>
-                </div>
+                </div> */}
 
             {/*                 
                     <div className="form-check form-group mx-auto" aria-label="buttonExample"> 

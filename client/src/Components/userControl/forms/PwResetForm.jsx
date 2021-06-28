@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 
 import Main from '../../Main';
-import MyAlert from '../layout/Alert';
+///import MyAlert from '../layout/Alert';
 import ButtonMU from '../layout/ButtonMU';
 
 const PwResetForm = (props) => {
@@ -31,13 +31,14 @@ const PwResetForm = (props) => {
                 <br />
                   {/* <div className="form-row"> */}
                     <div className="form-group col-lg-12">
-                      <label>Enter Your New Password</label>
+                      <label>Enter Your New Password (8-12 characters including 1 uppercase, 1 lowercase, 1
+                        number, 1 special character. No Whitespace)</label>
 
                       <input
                         type="password"
                         name="password"
                         ref={passwordRef}
-                        placeholder="password"
+                        placeholder="enter a new password"
                         className="form-control"
                         value={props.newPassword}
                         onChange={props.changeNewPW}
@@ -52,7 +53,7 @@ const PwResetForm = (props) => {
                       <input
                         type="password"
                         name="passWord"
-                        placeholder="password"
+                        placeholder="re-enter the same password"
                         className="form-control"
                         value={props.confirmNewPW}
                         onChange={props.changeConfirmNewPW}
@@ -65,7 +66,7 @@ const PwResetForm = (props) => {
                       </button>
                     </div>
 
-                    <div className="form-group col-lg-12">
+                    {/* <div className="form-group col-lg-12">
                    
                     {props.alertPW && (
                       <MyAlert                      
@@ -81,7 +82,7 @@ const PwResetForm = (props) => {
                         alertMessage={"Inconsistent Password!"}
                       />
                     )}
-                  </div> 
+                  </div>  */}
                 </fieldset>
             </form>
                         </div>

@@ -40,7 +40,28 @@ h5 {
   margin-top: 1rem;
 }
 
+.about-card-text.vision {
+  font-family: $fontFamily;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+  // margin-top: 1rem;
+
+}
+
 .icons {
   margin-top: auto;
   font-size: 2rem;
+}
+
+@media screen and (min-width:641px) and (max-width:1007px) {
+  .about-card-body.vision {
+    transform: translate(0%, -15%);
+  }
+}
+
+@media screen and (min-width:1008px) and (max-width:1024px) {
+  .about-card-body.vision {
+    transform: translate(0%, -9%);
+  }
 }
