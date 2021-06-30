@@ -8,20 +8,22 @@ const ChangePassword = () => {
 
     const history = useHistory()
     const context = useContext(SearchContext)
-    const { 
-        userInfo, 
+    const {
+        userInfo,
         newPassword,
         setNewPassword,
-        confirmNewPW, 
-        setConfirmNewPW,            
+        confirmNewPW,
+        setConfirmNewPW,
     } = context
 
     //the axios.create does not work, why?
-    const updatePW = async() => {
+    const updatePW = async () => {
         try {
             const config = {
-                headers: { authorization: 'Bearer ' + userInfo.token, 
-                            "Content-Type": "application/json" },
+                headers: {
+                    authorization: 'Bearer ' + userInfo.token,
+                    "Content-Type": "application/json"
+                },
             };
             const data = { newPassword };
             const response = await axios.post(
@@ -29,12 +31,12 @@ const ChangePassword = () => {
                 data,
                 config
             );
-            
-            if (response){
+
+            if (response) {
                 alert('Your password has been changed! Remember to use your new password next time you log in ')
             }
         } catch (err) {
-        console.log(`Something went wrong ${err}`);                
+            console.log(`Something went wrong ${err}`);
         }
     }
 
@@ -42,7 +44,7 @@ const ChangePassword = () => {
         setNewPassword(e.target.value);
     }
 
-    const changeConfirmPW = (e) =>{
+    const changeConfirmPW = (e) => {
         setConfirmNewPW(e.target.value)
     };
 
@@ -52,45 +54,45 @@ const ChangePassword = () => {
         const pwValidator = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])([a-zA-Z0-9@$!%*?&]{8,12})$/
         const isPwValid = pwValidator.test(newPassword);
 
-        if(!isPwValid){
-            alert('please follow the instruction of setting password' )                                       
-        }        
+        if (!isPwValid) {
+            alert('please follow the instruction of setting password')
+        }
 
-        if(newPassword !== confirmNewPW) {
-            alert('inconsistent password!')                  
-        }               
+        if (newPassword !== confirmNewPW) {
+            alert('inconsistent password!')
+        }
 
-            //     const url = `http://localhost:4000/profile`
-            //     const authAxios = axios.create({
-            //             baseURL: url,
-            //             // const config = { headers: { authorization: 'Bearer '+userInfo.token } }
-            //             headers: { authorization: 'Bearer '+userInfo.token, 
-            //                        "Content-Type": "application/json" },  
-            //             body: newPassword                        
-            //         }) 
-        
-            //     const updatePW = async()=>{
-            //             try{
-            //                 const result = await authAxios.post('/change_password/')
-            //                 console.log(result)
-            //             } catch(err)
-            //             { console.log(err.message) }
-            //         }
-            
-        if(isPwValid && (newPassword === confirmNewPW)) {
-                    updatePW();                    
-            }   
+        //     const url = `http://localhost:4000/profile`
+        //     const authAxios = axios.create({
+        //             baseURL: url,
+        //             // const config = { headers: { authorization: 'Bearer '+userInfo.token } }
+        //             headers: { authorization: 'Bearer '+userInfo.token, 
+        //                        "Content-Type": "application/json" },  
+        //             body: newPassword                        
+        //         }) 
+
+        //     const updatePW = async()=>{
+        //             try{
+        //                 const result = await authAxios.post('/change_password/')
+        //                 console.log(result)
+        //             } catch(err)
+        //             { console.log(err.message) }
+        //         }
+
+        if (isPwValid && (newPassword === confirmNewPW)) {
+            updatePW();
+        }
 
         setNewPassword("");
         setConfirmNewPW("");
-    }             
+    }
 
     return (
 
-        <div className="card-body">
+        <div className="password-body">
             <form onSubmit={submitHandler}>
 
-                <div className="form-group col-lg-7">
+                <div className="form-group col-lg-12">
                     <label>
                         New Password (8-12 characters, at least 1 uppercase, 1 lowercase, 1
                         number, 1 special character. No Whitespace)
@@ -107,7 +109,7 @@ const ChangePassword = () => {
                     />
                 </div>
 
-                <div className="form-group col-lg-5">
+                <div className="form-group col-lg-12">
                     <label className="mb-4">Confirm Password</label>
                     <br />
                     <input
@@ -121,16 +123,16 @@ const ChangePassword = () => {
                     />
                 </div>
 
-                <div className="form-group col-lg-12 d-flex">
+                <div className="form-group col-lg-12 d-flex justify-content-center">
                     <button type="submit" className="btn btn-primary btn-sm">
                         Submit
                     </button>
                 </div>
 
-                <div className="form-group col-lg-12 d-flex">
+                <div className="form-group col-lg-12 d-flex justify-content-center">
                     <button className="btn btn-primary btn-md"><Link to="/profile">Back to profile</Link>
                     </button>
-                </div>               
+                </div>
 
             </form>
 
