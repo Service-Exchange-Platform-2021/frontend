@@ -57,6 +57,7 @@ const SearchResult = ({ result }) => {
           </div>
 
           <div className="avatar-description-email">
+
             {userInfo.user ? (
               <img src={avatar_url} alt="avatar" className="avatar" />
             ) : (
@@ -64,13 +65,13 @@ const SearchResult = ({ result }) => {
 			  className="avatar" 
 			  />
             )}
-            <p>
-              <em>
-                <q>{description}</q>
-              </em>
-            </p>
-
-            <p>
+			
+			{userInfo.user ? (
+				<em><q>{description}</q></em>
+				) : (
+					"none"
+					)}
+             <p>
               e-mail:
               <span>
                 {" "}
