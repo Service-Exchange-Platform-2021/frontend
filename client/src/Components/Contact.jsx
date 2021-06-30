@@ -83,7 +83,7 @@ const handleEmail = () => {
     <>
       <Main />
       <form id="contact" onSubmit={(e) => formSubmit(e)} method="POST">
-        <h3>Leave Us a message</h3>
+        <h6>Leave Us a message</h6>
         <div className="form-group">
           <div className="d-flex justify-content-end">
             <ButtonMU
