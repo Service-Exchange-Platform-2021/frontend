@@ -62,20 +62,14 @@ const MailForm = ({ toEmail, result }) => {
 		<>
 			<Form onSubmit={handleMail} className="mail">
 				<Form.Group className="mb-3" controlId="formGroupEmail">
-					{/* <div className="mailFromTo">
-						<p> From</p>
-						<p className="mailBorder">{user.email}</p>
-						<p>To </p>
-						<p className="mailBorder">{toEmail}</p>
-					</div> */}
+					
 					<div className="mailFromTo">
 						<p> From</p>
 						<p className="mailBorder">{user.username}</p>
 						<p> To </p>
 						<p className="mailBorder">{toEmail}</p>
 					</div>
-					{/* <Form.Label> Subject </Form.Label>{' '}
-					<Form.Control onChange = {(e) => setEmailSubject(e.target.value) } type="text" name="subject" placeholder="title of your message" /> */}
+					
 					<Form.Label> Subject </Form.Label>{' '}
 					<Form.Control
 						onChange={(e) => setEmailSubject(e.target.value)}
@@ -96,7 +90,7 @@ const MailForm = ({ toEmail, result }) => {
 					</Form.Group>
 				</Form.Group>{' '}
 				<button type="submit" className="sendMail">
-					send
+					Send
 				</button>
 			</Form>{' '}
 			{emailResponse.length > 0 && <p>{emailResponse}</p>}

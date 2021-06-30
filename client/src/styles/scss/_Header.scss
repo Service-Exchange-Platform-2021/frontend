@@ -14,6 +14,11 @@
     }
 }
 
+.btn-group>.btn-group:not(:first-child),
+.btn-group>.btn:not(:first-child) {
+    margin-left: 0px;
+}
+
 .btnFindDiv {
     @media only screen and (max-width: 762px) {
         margin-top: 15px;

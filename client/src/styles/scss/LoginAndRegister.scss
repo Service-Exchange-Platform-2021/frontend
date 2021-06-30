@@ -1,5 +1,4 @@
 @import "./variables";
-
 .lingua {
     width: 30px;
 }
@@ -13,7 +12,7 @@
 }
 
 .dropdown-menu.show {
-    min-width: 126px !important;
+    min-width: 183px !important;
 }
 
 .dropdown-toggle {
@@ -59,7 +58,7 @@ a:hover {
 .dropdown-menu.show {
     max-width: 50px;
     min-width: 82px;
-    width: 50px !important;
+    // width: 50px !important;
 }
 
 .login {
@@ -91,14 +90,13 @@ a:hover {
 }
 
 .LogRegLarge {
-    
     display: flex;
     flex-direction: row;
-
     @media only screen and (max-width: 763px) {
         display: none;
     }
 }
+
 .log {
     font-size: $fontSize;
 }
@@ -115,6 +113,6 @@ a:hover {
 
 .LogRegSmall button {
     margin-left: 2px;
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
     border: none;
 }
