@@ -28,7 +28,7 @@ const ChangeDescription = () => {
     const postNewDescription = (description) => {
 
         const data = { description };
-        const config = { headers: { authorization: 'Bearer '+userInfo.token } }
+        const config = { headers: { authorization: 'Bearer ' + userInfo.token } }
         axios.patch('http://localhost:4000/profile', data, config)
             //we do not need res.json in axios at all
             .then(res => {
@@ -44,13 +44,9 @@ const ChangeDescription = () => {
     //Submit event handler
     const formSubmit = () => {
         postNewDescription(description)
-
     };
 
-
     const nameRef = useRef()
-
-
 
     return (
         <>
@@ -78,12 +74,7 @@ const ChangeDescription = () => {
                 <button className="btn btn-primary btn-md"><Link to="/profile">Back to profile</Link>
                 </button>
             </div>
-
-
         </>
-
-
-
     )
 }
 

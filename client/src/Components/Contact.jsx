@@ -50,7 +50,11 @@ const Contact = () => {
                 body,
                 config
             );
+            
             setResponseMessage(response.data.message);
+           
+            alert("We have received your message. Thank you.")
+            
             // contactData.name = "";
             // contactData.email = "";
             // contactData.message = "";
@@ -65,8 +69,7 @@ const Contact = () => {
         setLoading(false); 
         }
     };
-const handleEmail = () => {  
-
+const handleEmail = () => { 
     return <p>{responseMessage}</p>
 } 
 

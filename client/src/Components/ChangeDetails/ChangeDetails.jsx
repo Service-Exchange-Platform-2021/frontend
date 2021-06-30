@@ -36,8 +36,8 @@ const ChangeDetails = () => {
     const postNewUser = (firstname, lastname, country, region, username, savedImage, offerSelection) => {
 
         const data = { firstname, lastname, country, region, username, avatar_url:savedImage, skills:offerSelection };
-        //originally only token is returned, 'Bearer' + is added to conform to the auth middleware
-        const config = { headers: { authorization: 'Bearer '+userInfo.token } }
+        const config = { headers: { authorization: "Bearer " + userInfo.token } }
+        console.log(config)
         axios.patch('http://localhost:4000/profile', data, config)
             //we do not need res.json in axios at all
             .then(res => {
@@ -113,11 +113,9 @@ const ChangeDetails = () => {
         setLastName(e.target.value);
     }
 
-
     const changeUserName = (e) => {
         setUserName(e.target.value);
     }
-
 
     const changeCountry = (val) => {
         setCountry(val)
@@ -134,7 +132,6 @@ const ChangeDetails = () => {
     //   }
 
     const onCrop = (preview) => {
-
         setPreview(preview);
         setSavedImage(preview);
     }

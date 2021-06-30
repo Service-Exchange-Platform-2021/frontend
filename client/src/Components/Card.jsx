@@ -7,11 +7,6 @@ import { Link } from "react-router-dom";
 import '../styles/scss/Card.scss'
 import { Route } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
-import { FaThumbsUp } from 'react-icons/fa';
-
-
-
-
 
 function Card(props) {
     const [name, setName] = useState("User Name");
@@ -37,35 +32,29 @@ function Card(props) {
 
             </div>
             <div className="lower-container">
-
-
                 <Route path="/profile" exact >
                     <div className="flex-grid">
                         <div className="user-information">
-
                             <h4>{about}</h4>
                             <p>{props.aboutUs}</p>
                             <br />
                             <Button goToMenu="profile/change_description"><Link to="profile/change_description">Change description</Link></Button>
-
-
-
-
-
-
                         </div>
                         <div className="about-container">
 
                             <h4>{offer}</h4>
                             {props.skills.map(skill => <p key={skill.id}>{skill.value}</p>)}
 
-                            <h4>{userInfo.user.country}</h4>
-                            <p>{props.country}</p>
-                            <h4>{userInfo.user.region}</h4>
-                            <p>{props.region}</p>
+                            <div className="country">
+                                <h4>Country : {userInfo.user.country}</h4>
+                                <h4></h4>
+                                <p>{props.country}</p>
+                                <h4>Region : {userInfo.user.region}</h4>
+                                <p>{props.region}</p>
+                            </div>
 
-                            <Button goToMenu="profile/change_details"><Link to="profile/change_details">Change details</Link></Button>
-                            <Button goToMenu="profile/change_password"><Link to="profile/change_password">Change password</Link></Button>
+                            <Button className="change-button" goToMenu="profile/change_details"><Link to="profile/change_details">Change details</Link></Button>
+                            <Button className="change-button" goToMenu="profile/change_password"><Link to="profile/change_password">Change password</Link></Button>
 
 
                         </div>
