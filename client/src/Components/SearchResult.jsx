@@ -69,9 +69,9 @@ const SearchResult = ({ result }) => {
 			{userInfo.user ? (
 				<em><q>{description}</q></em>
 				) : (
-					"none"
+					<p></p>
 					)}
-             <p>
+             <p className = "email">
               e-mail:
               <span>
                 {" "}
