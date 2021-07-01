@@ -69,7 +69,7 @@ const SearchResult = ({ result }) => {
 							<p></p>
 						)}
 						<p className="email">
-							e-mail:
+							
 							<span>
 								{' '}
 								{email ? (
@@ -82,7 +82,7 @@ const SearchResult = ({ result }) => {
 									</button>
 								) : (
 									<p className="redFont">
-										please log in to see the <strong>e-mail</strong>{' '}
+										please log in to get in  <strong>contact</strong>{' '}
 									</p>
 								)}
 							</span>{' '}
