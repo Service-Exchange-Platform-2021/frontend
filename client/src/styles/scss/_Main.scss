@@ -16,6 +16,7 @@ h1 {
         margin-left: 13px;
         margin-right: 13px;
         text-align: center;
+        color: #333;
     }
 }
 
@@ -25,8 +26,11 @@ h1 {
 
 h1::after {
     content: "";
-    border: 1px solid white;
+    border: 1px solid rgb(255, 255, 255);
     display: block;
+    @media only screen and (max-width: 537px) {
+        color: #333;
+    }
 }
 
 .logo {
@@ -46,6 +50,7 @@ h1::after {
         font-size: 12px;
         margin-left: 20px;
         margin-right: 20px;
+        color: #333;
     }
 }
 
@@ -105,6 +110,9 @@ h1::after {
     margin-top: 3rem;
     color: #fff;
     text-shadow: 5px 10px 15px rgba(0, 0, 0, 0.7);
+    @media only screen and (max-width: 537px) {
+        color: #333;
+    }
 }
 
 @keyframes animate {
