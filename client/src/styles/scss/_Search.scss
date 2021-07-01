@@ -186,3 +186,11 @@ label {
 .sendMail {
     @include redButtons()
 }
+
+.email {
+    margin-top: 36px;
+}
+
+.searchResultList {
+    margin-right: 4px !important;
+}

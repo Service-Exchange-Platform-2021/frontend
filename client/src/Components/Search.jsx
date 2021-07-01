@@ -13,7 +13,7 @@ const Search = () => {
     <SearchResult result={result} />
   ));
 
-  const list = lookSelection.map((selection) => selection.value);
+  const list = lookSelection.map((selection) => ' '+ selection.value);
 
   return (
     <>
@@ -21,14 +21,15 @@ const Search = () => {
       <br />
       <br />
       <div className="searchCriteriaDisplay">
-        <p>You are looking for: {list.toString()}</p>
+        <p className="searchResultList">You are looking for:</p>
+        <p>  {list.toString()}</p>
         <p>
           {" "}
           in {country} / {region}.
         </p>
       </div>
 
-      {searchResults.length > 0 && <p className="matches">Here comes the matches we found for you:</p>}
+      {searchResults.length > 0 && <p className="matches">Here come the matches we have found for you:</p>}
       {searchResults.length > 0 ? (
         searchResultsDisplay
       ) : (

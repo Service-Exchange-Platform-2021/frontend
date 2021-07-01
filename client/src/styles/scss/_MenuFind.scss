@@ -3,9 +3,6 @@
         position: relative !important;
         top: 0 !important;
         left: -4px;
-        //max-width: 50px;
-        // min-width: 162px !important;
-        // width: 161px !important;
     }
     
     .menu {
@@ -23,14 +20,14 @@
     }
     
     .skillsMenus {
-        margin-left: 9px;
+        margin-left: 19px;
         display: flex;
         flex-direction: row;
-        @media only screen and (max-width: 762px) {
-            display: flex;
-            flex-direction: column;
-            flex-basis: 25%;
-        }
+        // @media only screen and (max-width: 762px) {
+        //     display: flex;
+        //     // flex-direction: column;
+        //     flex-basis: 25%;
+        // }
     }
     
     .inp {
@@ -153,14 +150,9 @@
     }
     
     .dropdown-toggle::after {
-        display: inline-block;
         width: 0.5em;
         height: 0.5em;
-        margin: -0.3em 0 0 0.4em;
-        margin-top: -0.3em;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 2.5em;
+        margin-left: 26px;
         vertical-align: middle;
         content: "";
         border: 0.3em solid;
@@ -170,7 +162,7 @@
         border-bottom-width: 2px;
         border-left-width: 0px;
         transform: rotateZ(45deg);
-        @media only screen and (max-width: 762px) {
+        @media only screen and (max-width: 790px) {
             margin-left: 1.7em;
         }
     }
@@ -275,13 +267,13 @@
     }
     
     .largeFindMenu {
-        @media only screen and (max-width: 763px) {
+        @media only screen and (max-width: 790px) {
             display: none;
         }
     }
     
     .smallFindMenu {
-        @media only screen and (max-width: 763px) {
+        @media only screen and (max-width: 790px) {
             display: flex;
             flex-direction: column;
             background-color: $bgColor;
@@ -289,7 +281,7 @@
             margin-top: 13px;
             margin-right: 15px;
         }
-        @media only screen and (min-width: 763px) {
+        @media only screen and (min-width: 790px) {
             display: none;
         }
     }
@@ -311,4 +303,10 @@
     .logo {
         margin-left: 20px;
         margin-right: 7px;
+    }
+    
+    .countryAndRegion select {
+        margin-right: 19px;
+        // display: flex;
+        flex-direction: column !important;
     }

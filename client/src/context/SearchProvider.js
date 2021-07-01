@@ -157,15 +157,16 @@ const SearchProvider = (props) => {
         setFirstName,
         username,
         setUserName,
-        emailSubject, 
+        emailSubject,
         setEmailSubject,
-        emailMessage, 
+        emailMessage,
         setEmailMessage
     }
 
-    return ( 
-        
-        <SearchContext.Provider value = { values } > { props.children } </SearchContext.Provider> 
+    return (
+
+        <
+        SearchContext.Provider value = { values } > { props.children } < /SearchContext.Provider> 
     );
 };
 
