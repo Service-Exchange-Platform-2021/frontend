@@ -8,13 +8,12 @@ import Image4 from "../assets/images/alexis-brown-omea.jpg";
 function Main() {
   return (
     <>
-      <div id="home">
+      <div>
         <div className="slightContainer">
           <BackgroundSlideshow images={[Image2, Image3, Image4]} />
           <div>
             <main className="main">
               <h1>Two Way Street</h1>
-
               <p>Service Exchange Platform - get new skills for FREE!!</p>
               <button
                 className="btnJoinFind"

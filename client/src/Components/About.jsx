@@ -6,7 +6,7 @@ import { FaRegCompass, FaMedapps } from "react-icons/fa";
 const About = () => {
   return (
     <>
-    <div id="aboutUs" className="about">     
+    <div className="about">     
       <CardDeck  style={{textAlign:"center",marginTop:"1rem"}} className="about-card-deck">       
         <Card style={{lineHeight:"32px"}} className="about-card">
           <Card.Body className="about-card-body">
