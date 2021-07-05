@@ -150,8 +150,8 @@
     }
     
     .dropdown-toggle::after {
-        width: 0.5em;
-        height: 0.5em;
+        width: 0.3em;
+        height: 0.3em;
         margin-left: 26px;
         vertical-align: middle;
         content: "";
@@ -309,4 +309,15 @@
         margin-right: 19px;
         // display: flex;
         flex-direction: column !important;
+    }
+    
+    .LogRegSmall button {
+        margin-left: 2px;
+        margin-bottom: 12px !important;
+        border: none;
+    }
+    
+    .LogRegLarge button {
+        margin-left: 2px;
+        border: none;
     }
