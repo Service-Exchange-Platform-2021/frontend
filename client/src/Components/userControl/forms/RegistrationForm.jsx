@@ -185,7 +185,7 @@ const RegistrationForm = (props) => {
                   </div>
 
                   <div className="form-group col-lg-12 d-flex justify-content-end">
-                    <button type="submit" className="btn btn-primary btn-sm">
+                    <button type="submit" className="btn btn-primary btn-sm sub">
                       Submit
                     </button>
                   </div>
