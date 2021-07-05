@@ -106,7 +106,7 @@ const Header = () => {
           height="30px"
           src={userInfo.user.avatar_url} alt="avatar" style={{ display: showLogout }}/> }
 
-          <div className="btn-group LogRegSmall" role="group">
+          <div className="btn-group" role="group">
             <button>EN</button>
             <button>DE</button>
           </div>

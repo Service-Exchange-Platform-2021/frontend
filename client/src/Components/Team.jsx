@@ -42,8 +42,8 @@ const Team = () => {
 
   return (
     <section className="team section card">
-      <div id="aboutUs" className="title">
-        <h2>our team</h2>
+      <div className="title">
+        <h2 id="aboutUs">our team</h2>
       </div>
       <div className="section-center">
         {people.map((person, personIndex) => {
