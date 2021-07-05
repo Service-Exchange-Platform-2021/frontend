@@ -20,10 +20,7 @@ function FindMenu({goSearch}) {
     setShowSkillsSelection,
     showSkillsSelection,
     itemSkills,
-    // setItemSkills
-  } = context;
-  
-  // const data = { country, region, lookSelection, userInfo, searchResults, setItemSkills }
+    } = context;
   
 
   return (
@@ -38,7 +35,6 @@ function FindMenu({goSearch}) {
         <div className="skillsMenus">
           <SkillsMenuLarge
             title="I'm Looking For"
-            // items={items}
             items={itemSkills}
             goSearch={goSearch}
             multiSelect
@@ -75,10 +71,6 @@ function FindMenu({goSearch}) {
       </form>
 
       <FindMenuSmall 
-        //showHide={showHide}
-        // show={show}
-        //setShow={setShow}
-        // items={items}
         items={itemSkills}
         lookSelection={lookSelection}
         handleLookSelection={handleLookSelection}
