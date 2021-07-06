@@ -106,7 +106,7 @@ const LoginForm = (props) => {
                     </div> */}
 
                     <div className="form-check form-group col-lg-5">
-                      <button type="submit" className="btn btn-primary btn-sm"
+                      <button type="submit" className="btn btn-primary btn-sm sub"
                       >
                         Login
                       </button>
@@ -122,7 +122,7 @@ const LoginForm = (props) => {
                       If you have not already registered with us, register and
                       <br /> 
                       <Link to="/register">
-                        <h6><a href="#" className="mt-3 btn btn-primary btn-sm"> join us</a></h6>     
+                        <h6><a href="#" className="mt-3 btn btn-primary btn-sm sub"> join us</a></h6>     
                       </Link>                       
                     </h6>
 

@@ -48,7 +48,7 @@ const ForgetPWForm = (props) => {
                       required
                     />
                     <div className="mt-3">
-                      <button type="submit" className="btn btn-sm btn-primary">
+                      <button type="submit" className="btn btn-sm btn-primary sub">
                         Reset
                       </button>
                     </div>
