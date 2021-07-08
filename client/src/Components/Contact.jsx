@@ -134,7 +134,7 @@ const handleEmail = () => {
           />
         </div>
         <div className="form-group">
-          <button type="submit" className="btn btn-primary btn-sm">
+          <button type="submit" className="mt-3 btn btn-primary btn-sm sub">
             Submit
           </button>
           {loading ? (
